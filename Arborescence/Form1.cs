@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace Arborescence
 {
@@ -126,8 +127,8 @@ namespace Arborescence
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
-            System.Diagnostics.ProcessStartInfo open = new System.Diagnostics.ProcessStartInfo(folderBrowserDialog1.SelectedPath + @"\" + listBox1.SelectedItem.ToString());
-            System.Diagnostics.Process.Start(open);
+            ProcessStartInfo open = new ProcessStartInfo(folderBrowserDialog1.SelectedPath + @"\" + listBox1.SelectedItem.ToString());
+            Process.Start(open);
         }
     }
 }
